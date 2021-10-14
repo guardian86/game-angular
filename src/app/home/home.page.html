@@ -1,0 +1,12 @@
+<div class="game-container center-flex">
+  <div class="game-number center-flex">{{primerNumero}}</div>
+  <div class="game-operator center-flex">{{signo}}</div>
+  <div class="game-number center-flex">{{segundoNumero}}</div>  
+  <div class="game-form">
+    <ion-input class="game-form-input" type="number" [(ngModel)]="resultado"></ion-input>
+    <button class="game-form-button" (click)="validarResultado()">Validar</button>
+    <div *ngIf="calificacion === true">Correcto</div>
+    <div *ngIf="calificacion === false">Incorrecto</div>
+    <button class="game-form-button" (click)="nuevaOperacion()">Generar nueva</button>
+  </div>
+</div>
